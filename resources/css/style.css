@@ -1,0 +1,135 @@
+/* DOCUMENT INFORMATION
+	- Document: Formao Theme
+	- Version:  1.0.0
+	- Author:   Philippe Y.
+*/
+
+
+/* COLORS
+	- default body text  #fff
+	- subtitle h2 text   
+	- form input borders 
+	- default p text     
+	- pre borders        
+    - button             #f39c12
+    - border             #f39c12
+*/
+
+
+/* FONTS
+	- default body text  Lato, sans serif
+	- subtitle h2 text   
+	- form input text    
+	- default p text     
+	- pre and code       
+*/
+
+
+/* CSS DIRECTORY
+	1. =GLOBAL
+	2. =PRIMARY
+	3. =HEADER
+	4. =SIDEBAR
+	5. =FOOTER
+*/
+
+
+
+/*  GLOBAL
+	======================================= */ 
+
+html {
+    background-color: #fff;
+    font-family: 'Lato', 'Arial', sans-serif;
+
+}
+
+h1 {
+    font-family: 'Lato', 'Arial', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 240%;
+    letter-spacing: -1px;
+    font-weight: 300;
+    word-spacing: 8px
+    
+}
+
+p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+
+
+
+
+/*  HEADER
+	======================================= */ 
+
+
+
+header {
+    background-image: linear-gradient( rgba(0,242,96,0.4), rgba(7,117,230,0.6)), url(../images/banniere.jpg);
+    height: 100vh;  /*  100% viewport height * Le viewport est la zone de visualisation du navigateur */
+    background-size: cover;
+    background-position: center;    
+}
+
+
+.home-title {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+
+.home-title h1 {
+    font-size: 340%;
+}
+
+.btn:link, /* La pseudo-classe :link spécifie l'apparence d'un élément lien */
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius : 10px;
+    transition: background-color 1s, border 1s, color 1s;
+
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #f39c12; /* https://flatuicolors.com */
+    color: #fff
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #f39c12;
+    color: #d8890b; /* http://www.0to255.com */
+}
+
+.btn:hover,
+.btn:active { /* La pseudo classe :hover spécifie l'apparence d'un élément lors du survole de la souris. */
+}
+
+
+
+.btn-full:hover,
+.btn-full:active
+{
+    background-color: #d8890b;
+    border: 1px solid #f39c12;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: #f39c12;
+    color: #fff; /* http://www.0to255.com */
+}
+
+
+
+
