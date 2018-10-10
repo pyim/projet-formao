@@ -14,7 +14,7 @@
 
 
 /* FONTS
-	- default body text  Lato, sans serif
+	- default Lato, sans serif
   
 */
 
@@ -24,6 +24,7 @@
 	2. =HEADER
             = Title
             = Button
+            = Arrow
 */
 
 
@@ -109,8 +110,8 @@ header {
 
 .btn-ghost
 {
-    border: 1px solid #f39c12;
-    color: #d8890b; /* http://www.0to255.com */
+    border: 1px solid #fff;
+    color: #fff; /* http://www.0to255.com */
 }
 
 
@@ -124,9 +125,9 @@ header {
 
 .btn-ghost:hover,
 .btn-ghost:focus {
-    background-color: #f39c12;
     color: #fff;
-}
+    background-color: #d8890b;
+    border: 1px solid #d8890b;}
 
 /*  Arrow Down
 	======================================= */
@@ -143,7 +144,7 @@ header {
 
 .arrow-down:hover,
 .arrow-down:focus {
-    color: #ddd;
+    color: #d8890b;
 
 }
 
