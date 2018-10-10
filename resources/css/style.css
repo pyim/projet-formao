@@ -12,6 +12,7 @@
 	- default p text     
 	- pre borders        
     - button             #f39c12
+    - button:hover       #d8890b
     - border             #f39c12
 */
 
@@ -27,8 +28,10 @@
 
 /* CSS DIRECTORY
 	1. =GLOBAL
-	2. =PRIMARY
-	3. =HEADER
+	2. =HEADER
+            = Title
+            = Button
+            
 	4. =SIDEBAR
 	5. =FOOTER
 */
@@ -69,7 +72,6 @@ p {
 	======================================= */ 
 
 
-
 header {
     background-image: linear-gradient( rgba(0,242,96,0.4), rgba(7,117,230,0.6)), url(../images/banniere.jpg);
     height: 100vh;  /*  100% viewport height * Le viewport est la zone de visualisation du navigateur */
@@ -81,7 +83,6 @@ header {
 .home-title {
     position: absolute;
     top: 30%;
-    left: 20%;
 }
 
 
@@ -89,45 +90,52 @@ header {
     font-size: 340%;
 }
 
-.btn:link, /* La pseudo-classe :link spécifie l'apparence d'un élément lien */
-.btn:visited {
+.home-title h1 span {
+    font-weight: 500;
+}
+
+
+/*  Button
+	======================================= */ 
+
+.btn
+{
     display: inline-block;
     padding: 10px 30px;
     text-decoration: none;
     border-radius : 10px;
-    transition: background-color 1s, border 1s, color 1s;
-
+    transition: background-color 1s, border 1s, color 1s; /* alternative all 1s */
 }
 
-.btn-full:link,
-.btn-full:visited {
+
+.btn-full
+ {
     background-color: #f39c12; /* https://flatuicolors.com */
-    color: #fff
+    color: #fff;
+    margin-right: 15px;
+
 }
 
-.btn-ghost:link,
-.btn-ghost:visited {
+
+.btn-ghost
+{
     border: 1px solid #f39c12;
     color: #d8890b; /* http://www.0to255.com */
 }
 
-.btn:hover,
-.btn:active { /* La pseudo classe :hover spécifie l'apparence d'un élément lors du survole de la souris. */
-}
 
-
-
-.btn-full:hover,
-.btn-full:active
+.btn-full:hover, /* La pseudo classe :hover spécifie l'apparence d'un élément lors du survole de la souris.*/
+.btn-full:focus
 {
+    color: #fff;
     background-color: #d8890b;
-    border: 1px solid #f39c12;
+    border: 1px solid #d8890b;
 }
 
 .btn-ghost:hover,
-.btn-ghost:active {
+.btn-ghost:focus {
     background-color: #f39c12;
-    color: #fff; /* http://www.0to255.com */
+    color: #fff;
 }
 
 
