@@ -6,11 +6,7 @@
 
 
 /* COLORS
-	- default body text  #fff
-	- subtitle h2 text   
-	- form input borders 
-	- default p text     
-	- pre borders        
+	- default body text  #fff    
     - button             #f39c12
     - button:hover       #d8890b
     - border             #f39c12
@@ -19,10 +15,7 @@
 
 /* FONTS
 	- default body text  Lato, sans serif
-	- subtitle h2 text   
-	- form input text    
-	- default p text     
-	- pre and code       
+  
 */
 
 
@@ -31,9 +24,6 @@
 	2. =HEADER
             = Title
             = Button
-            
-	4. =SIDEBAR
-	5. =FOOTER
 */
 
 
@@ -138,6 +128,24 @@ header {
     color: #fff;
 }
 
+/*  Arrow Down
+	======================================= */
+
+.arrow-down {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    color: #fff;
+    font-size: 30px;
+    transition: color 0.2s;
+        
+}
+
+.arrow-down:hover,
+.arrow-down:focus {
+    color: #ddd;
+
+}
 
 
 
