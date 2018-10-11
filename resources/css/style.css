@@ -40,7 +40,7 @@ html {
 
 h1 {
     font-family: 'Lato', 'Arial', sans-serif;
-    color: #fff;
+    color: #333;
     text-transform: uppercase;
     font-size: 240%;
     letter-spacing: -1px;
@@ -48,6 +48,37 @@ h1 {
     word-spacing: 8px
     
 }
+
+h2 {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 250%;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #f39c12;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+
+h3 {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 160%;
+    font-weight: 300;
+    color: #333;
+}
+
+
 
 p {
     font-size: 12px;
@@ -79,6 +110,7 @@ header {
 
 .home-title h1 {
     font-size: 340%;
+    color: #fff;
 }
 
 .home-title h1 span {
@@ -138,7 +170,7 @@ header {
     bottom: 20px;
     color: #fff;
     font-size: 30px;
-    transition: color 0.2s;
+    transition: color 0.2s; /* https://caniuse.com/#search=css%20transition */
         
 }
 
@@ -149,4 +181,20 @@ header {
 }
 
 
+.img-service {
+    max-width: 100%;
+    height: auto;
+}
+
+.icon-service {
+    color: #f39c12;
+    font-size: 20px;
+}
+
+.icon-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+
+}
 
