@@ -25,6 +25,7 @@
             = Title
             = Button
             = Arrow
+    3. =NOS SERVICES
 */
 
 
@@ -86,7 +87,9 @@ p {
     line-height: 24px;
 }
 
-
+section {
+    padding: 30px 0;
+}
 
 
 
@@ -95,7 +98,7 @@ p {
 
 
 header {
-    background-image: linear-gradient( rgba(0,242,96,0.4), rgba(7,117,230,0.6)), url(../images/banniere.jpg);
+    background-image: linear-gradient( rgba(0,242,96,0.4), rgba(7,117,230,0.6)), url(../images/banniere.jpg); 
     height: 100vh;  /*  100% viewport height * Le viewport est la zone de visualisation du navigateur */
     background-size: cover;
     background-position: center;    
@@ -181,19 +184,30 @@ header {
 }
 
 
-/*  SERVICE 1
+/*  NOS SERVICES
 	======================================= */ 
 
-.service-1 {
-    padding: 100px 0;
+.service-feature {
+        margin: 20px 0;
 }
 
-.service-1-icon {
+.service-icon {
     color: #f39c12;
     font-size: 34px;
+    transition: all 1s;
+    
 }
 
-.img-service {
+.service-feature:hover .service-icon {
+    color: #d8890b;
+    transform: translateX(20px)
+}
+
+.service-feature-content {
+
+}
+
+.service-img {
     max-width: 100%;
     height: auto;
 }
@@ -210,35 +224,69 @@ header {
 }
 
 
-/*  SERVICE 2
+/*  LES METIERS DE FORMATION
 	======================================= */ 
 
-.service-2 {
-    padding: 100px;
+.metier {
     background-color: #f6f6f6;
 }
 
-.box-service {
-    background-color: #fff;
+.metier-box {
     padding: 40px 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
     
+
 }
 
-.box-service h3 {
-    text-align: center
+.metier-box i,
+.metier-box h3,
+.metier-box p {
+    color:#fff;
+
 }
 
-.box-service i {
-    color: #f39c12;
+.metier-box i {
+    text-align: center;
     font-size: 34px;
     display: block;
-    text-align: center;
     margin-bottom: 10px;
-   
+    transition: all 1s;
+
+}
+
+.metier-box:hover i {
+    transform: translateY(10px);
 }
 
 
+.metier-box h3 {
+    text-align: center;
+}
 
+
+.batiment {
+        background-image: linear-gradient( rgba(3,247,198,0.7), rgba(32,124,229,1)), url(../images/batiment.jpg); /* https://www.cssmatic.com */
+        transition: all 1s; 
+}
+
+.batiment:hover {
+        background-image: linear-gradient( rgba(3,247,198,0.9), rgba(32,124,229,1)), url(../images/batiment.jpg);
+}
+
+.graphisme {
+        background-image: linear-gradient( rgba(255,234,0,0.7), rgba(255,0,132,1)), url(../images/graphisme.jpg);
+}
+
+.graphisme:hover {
+        background-image: linear-gradient( rgba(255,234,0,0.9), rgba(255,0,132,1)), url(../images/graphisme.jpg);
+}
+
+.web {
+        background-image: linear-gradient( rgba(153,153,153,0.7), rgba(99,99,99,1)), url(../images/web.jpg);
+}
+
+.web:hover {
+        background-image: linear-gradient( rgba(153,153,153,0.9), rgba(99,99,99,1)), url(../images/web.jpg);
+}
 
