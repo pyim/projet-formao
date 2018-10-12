@@ -181,14 +181,25 @@ header {
 }
 
 
+/*  SERVICE 1
+	======================================= */ 
+
+.service-1 {
+    padding: 100px 0;
+}
+
+.service-1-icon {
+    color: #f39c12;
+    font-size: 34px;
+}
+
 .img-service {
     max-width: 100%;
     height: auto;
 }
 
-.icon-service {
-    color: #f39c12;
-    font-size: 20px;
+.icon-app {
+    margin-top: 20px;
 }
 
 .icon-app img {
@@ -197,4 +208,37 @@ header {
     margin-right: 20px;
 
 }
+
+
+/*  SERVICE 2
+	======================================= */ 
+
+.service-2 {
+    padding: 100px;
+    background-color: #f6f6f6;
+}
+
+.box-service {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+}
+
+.box-service h3 {
+    text-align: center
+}
+
+.box-service i {
+    color: #f39c12;
+    font-size: 34px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+   
+}
+
+
+
 
