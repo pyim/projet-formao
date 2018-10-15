@@ -175,6 +175,7 @@ header {
     color: #fff;
     font-size: 30px;
     transition: color 0.2s; /* https://caniuse.com/#search=css%20transition */
+
         
 }
 
@@ -340,5 +341,54 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     font-size: 100%;
 
     color: #000;
+}
+
+
+/*  CUSTOMER
+	======================================= */ 
+
+
+.customer {
+    background-image:  linear-gradient( rgba(0,242,96,0.4), rgba(7,117,230,0.6)), url(../images/customer/customer.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.customer h2 {
+    color: #fff;
+}
+
+
+blockquote {
+    padding: 5px;
+    font-style: italic;
+    line-height: 130%;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+
+
+cite {
+    font-size: 90%;
+    margin-top: 20px;
+    display: block;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+blockquote:before {
+    content:"\201c"; /* https://css-tricks.com/snippets/html/glyphs */
+    font-size: 800%;
+    font-family: 'Sanchez', serif; /*  <link href="https://fonts.googleapis.com/css?family=Sanchez:400italic,400" rel="stylesheet">  */
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    color: rgba(255, 255, 255, 0.5);
+
 }
 
