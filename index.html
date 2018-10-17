@@ -20,10 +20,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="resources/css/style.css">
 
+   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+    
 
-
-
-
+    
+    
 
 </head>
 
@@ -420,7 +422,70 @@
     </section>
     
     
+    <section>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Ils nous font confiance </h2>
+                </div>
+            </div>            
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo">
+                        <div class="logo-brand">
+                            <img src="resources/images/logo/logo1.jpg" alt="logo">
+                        </div>
+                        
+                        <div class="logo-brand">
+                            <img src="resources/images/logo/logo2.jpg" alt="logo">
+                        </div>
+                        
+                        <div class="logo-brand">
+                            <img src="resources/images/logo/logo3.jpg" alt="logo">
+                        </div>
+                        
+                        <div class="logo-brand">
+                            <img src="resources/images/logo/logo4.jpg" alt="logo">
+                        </div>
+                        
+                        <div class="logo-brand">
+                            <img src="resources/images/logo/logo5.jpg" alt="logo">
+                        </div>
+                        
+                        <div class="logo-brand">
+                            <img src="resources/images/logo/logo6.jpg" alt="logo">
+                        </div>
+                        
+                        <div class="logo-brand">
+                            <img src="resources/images/logo/logo7.jpg" alt="logo">
+                        </div>
+                        
+                        <div class="logo-brand">
+                            <img src="resources/images/logo/logo8.jpg" alt="logo">
+                        </div>
+                        
+                        <div class="logo-brand">
+                            <img src="resources/images/logo/logo9.jpg" alt="logo">
+                        </div>
+                        
+                        
+                        <div class="logo-brand">
+                            <img src="resources/images/logo/logo10.jpg" alt="logo">
+                        </div>
+                                            
+                    
+                    
+                    </div>
+                
+                </div>
+            </div>
+        
+        </div>
     
+    
+    </section>
     
     
 
@@ -499,12 +564,63 @@
     </section>
      -->
 
+<section class="contact">
+    <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+
+            <div id='map'></div><!-- https://www.mapbox.com/ -->
+            <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHppbGxhIiwiYSI6ImNqbmQ2dXE5MTA0aHkza280enpvNTlxcjkifQ.Hs6hiriiEvrQb9ciDguWOQ';
+                const map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v10',
+                    center: [2.255849000000012, 48.173423], /* https://www.coordonnees-gps.fr */
+                    zoom: 14.5
+                });
+
+
+            /* https://www.mapbox.com/help/marker-playground */
+                map.on("load", function() {
+                    /* Image: An image is loaded and added to the map. */
+                    map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
+                        if (error) throw error;
+                        map.addImage("custom-marker", image);
+                        /* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
+                        map.addLayer({
+                            id: "markers",
+                            type: "symbol",
+                            /* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
+                            source: {
+                                type: "geojson",
+                                data: {
+                                    type: "FeatureCollection",
+                                    features: [{
+                                        "type": "Feature",
+                                        "geometry": {
+                                            "type": "Point",
+                                            "coordinates": [2.252314123291683, 48.174481284714886]
+                                        }
+                                    }]
+                                }
+                            },
+                            layout: {
+                                "icon-image": "custom-marker",
+                            }
+                        });
+                    });
+                });
+            </script>
+
+
+
+        </div>
+    </div>
 
 
 
 
-
-
+</section>
 
 
 
