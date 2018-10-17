@@ -503,3 +503,46 @@ blockquote:before {
 
 
 
+/*  COUNTER
+	======================================= */ 
+
+.counter {
+    background: linear-gradient( rgba(0,242,96,0.4), rgba(7,117,230,0.6)); 
+    padding-top: 60px;
+}
+
+
+.counter-content {
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #fff;
+    color : #fff;
+
+
+}
+
+.counter-content i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+.counter-content h3 {
+    font-size: 34px;
+    font-weight: 300;
+    margin: 0;
+    color: #fff;
+
+}
+
+.counter-content p {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0;
+
+}
+
+
+
+
