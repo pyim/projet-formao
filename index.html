@@ -20,8 +20,13 @@
     <!-- CSS -->
     <link rel="stylesheet" href="resources/css/style.css">
 
-   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   crossorigin=""></script>
+
     
 
     
@@ -563,65 +568,148 @@
             </div>
     </section>
      -->
-
 <section class="contact">
     <div class="row">
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact-content">
+                        <h2>Contact</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-phone">
+                            <i class="fas fa-phone"></i> 02.44.23.56.11
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="contact-adress">
+                            <i class="fas fa-map-marker"></i> 12A place du commerce 44000 Nantes</div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!--
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact-form">
+                        <form>
+                            <div>
+                                <label for="name">Nom :</label>
+                                <input type="text" id="user-name" />
+                            </div>
+                            
+                            <div>
+                                <label for="email">Votre Email :</label>
+                                <input type="email" id="email" />
+                            </div>
+                            <div>
+                                <label for="msg">Message :</label>
+                                <textarea id="msg"></textarea>
+                            </div>
+                            
+                            <div>
+                                <button type="submit">Envoyer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            -->
+            <div class="contact-form">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                    <form action="https://formspree.io/your@email.com"
+      method="POST">
+    <input type="text" name="name">
+    <input type="email" name="_replyto">
+    <input type="submit" value="Send">
+</form>
+                        </div>
+                    
+                    
+                    
+                    <form>  <!-- https://getbootstrap.com/docs/4.0/components/forms/ -->
+                    <div class="row">
+                         <div class="col-md-6"> 
+                       <div class="form-group">
+                         <label for="name">Nom :</label>
+                         <input type="text" class="form-control" id="name" />
+                       </div>
+                     </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">   
+                        <label for="Email">Email :</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ajouter ici votre email">
+                        <small class="form-text text-muted">Vous ne recevrez pas de la publicité.</small>
+                     </div>
+                        
+                    </div>
+                        
+                        
+                        
+                    </div>
+                    
+                     
+                     <div class="form-group">
+                        <label for="service">Sélectionner le service :</label>
+                        <select class="form-control" id="service">
+                            <option>Service client</option>
+                            <option>Service comptable</option>
+                            <option>Service après vente</option>
+                        </select>
+                     </div>
+                    <div class="form-group">
+                        <label for="content">Votre message :</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                        
+                    
+                        
+                    </form>
+                
+                </div>
+            
+            </div>
+            </div>
+
+        </div>
         <div class="col-md-6">
 
-            <div id='map'></div><!-- https://www.mapbox.com/ -->
+            <div class="contact-map" id="mapid"></div>
+
             <script>
-                mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHppbGxhIiwiYSI6ImNqbmQ2dXE5MTA0aHkza280enpvNTlxcjkifQ.Hs6hiriiEvrQb9ciDguWOQ';
-                const map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/mapbox/streets-v10',
-                    center: [2.255849000000012, 48.173423], /* https://www.coordonnees-gps.fr */
-                    zoom: 14.5
-                });
+                /* https://leafletjs.com/examples/quick-start */
+                var mymap = L.map('mapid').setView([47.2133021, -1.5582154999999602], 18);
+                L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', { /* https://leafletjs.com/reference-1.3.0.html#tilelayer */
+                    /* http://leaflet-extras.github.io/leaflet-providers/preview/ */
+                    maxZoom: 20
+                }).addTo(mymap);
 
 
-            /* https://www.mapbox.com/help/marker-playground */
-                map.on("load", function() {
-                    /* Image: An image is loaded and added to the map. */
-                    map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
-                        if (error) throw error;
-                        map.addImage("custom-marker", image);
-                        /* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
-                        map.addLayer({
-                            id: "markers",
-                            type: "symbol",
-                            /* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
-                            source: {
-                                type: "geojson",
-                                data: {
-                                    type: "FeatureCollection",
-                                    features: [{
-                                        "type": "Feature",
-                                        "geometry": {
-                                            "type": "Point",
-                                            "coordinates": [2.252314123291683, 48.174481284714886]
-                                        }
-                                    }]
-                                }
-                            },
-                            layout: {
-                                "icon-image": "custom-marker",
-                            }
-                        });
-                    });
-                });
+                /* Marker https://leafletjs.com/ */
+                L.marker([47.2133021, -1.5582154999999602]).addTo(mymap)
+                    .bindPopup('Coucou')
+                    .openPopup();
             </script>
-
-
-
         </div>
     </div>
 
-
-
-
 </section>
 
+    
+<footer>
+    <div class="copyright"><p>formao.fr - 2018</p></div>
+</footer>
 
 
 </body>
